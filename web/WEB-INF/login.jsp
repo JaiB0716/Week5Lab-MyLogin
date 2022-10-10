@@ -13,15 +13,14 @@
     </head>
     <body>
         <h1>Login</h1>
-            <form action="login" method="get">
+         <form action="login" method="get">
             Username: <input type="text" name="username"><br>
             Password: <input type="text" name="username"><br>
             <input type="submit" value="submit">
         </form>
         
-        <form action="login" method="get">
-            <input type="submit" value="log In">
-            <p type="hidden" name="logOut">You Have Successfully Logged Out</p>
+        <form action="logout" method="get">
+            
         </form>
     </body>
 </html>

@@ -10,8 +10,6 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
-import models.AccountService;
 
 /**
  *
@@ -23,15 +21,12 @@ public class LoginServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         
-        HttpSession session = request.getSession();
+      /*HttpSession session = request.getSession();
         
          String logOut = request.getParameter("logOut");
-         if(!logOut.exists) {
-             
-         } else {
-        }
+         
          getServletContext().getRequestDispatcher("/WEB-INF/login.jsp")
-                .forward(request,response);
+                .forward(request,response);*/
     }
 
     @Override
@@ -52,9 +47,6 @@ public class LoginServlet extends HttpServlet {
                 .forward(request,response);
          return;
       }
-      
-      AccountService user = new AccountService (username1, username2, password);
-      request.setAttribute("user", user);
       
       getServletContext().getRequestDispatcher("/WEB-INF/home.jsp")
                 .forward(request,response);
